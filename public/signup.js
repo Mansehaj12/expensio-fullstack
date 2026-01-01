@@ -13,7 +13,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   const familyCode = document.getElementById("familyCode")?.value || "";
 
   try {
-    const res = await fetch("http://localhost:5000/api/auth/signup", {
+    const res = await fetch("https://expensio-backend-fqj5.onrender.com/api/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -42,3 +42,4 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     alert("Server error. Try again later.");
   }
 });
+
