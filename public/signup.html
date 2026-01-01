@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Expensio</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="login-body">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+      <select id="themeSelect">
+        <option value="blue">💙 Blue</option>
+        <option value="purple">💜 Purple</option>
+        <option value="green">💚 Green</option>
+        <option value="orange">🧡 Orange</option>
+      </select>
+    </div>
+
+    <div class="login-wrapper">
+      <div class="login-card">
+        <!-- LEFT SIDE -->
+        <div class="login-left">
+          <div class="overlay"></div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png"
+            class="illustration"
+          />
+          <div class="text">
+            <h2>Join <span>Expensio</span></h2>
+            <p>Create your account and manage family expenses together.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="login-right">
+          <h3>Create Account</h3>
+
+          <form id="signupForm">
+            <div class="input-group">
+              <i class="fa fa-user"></i>
+              <input
+                type="text"
+                id="newUsername"
+                placeholder="Create Username"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <i class="fa fa-envelope"></i>
+              <input
+                type="email"
+                id="newEmail"
+                placeholder="Enter Email ID"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <i class="fa fa-lock"></i>
+              <input
+                type="password"
+                id="newPassword"
+                placeholder="Create Password"
+                required
+                minlength="5"
+              />
+            </div>
+
+            <h4>👨‍👩‍👧 Family Setup</h4>
+
+            <div class="family-options">
+              <label>
+                <input
+                  type="radio"
+                  name="familyOption"
+                  value="create"
+                  checked
+                />
+                Create Family
+              </label>
+              <label>
+                <input type="radio" name="familyOption" value="join" />
+                Join Family
+              </label>
+            </div>
+
+            <div class="input-group" id="createFamilyBox">
+              <i class="fa fa-users"></i>
+              <input type="text" id="familyName" placeholder="Family Name" />
+            </div>
+
+            <div class="input-group" id="joinFamilyBox" style="display: none">
+              <i class="fa fa-key"></i>
+              <input type="text" id="familyCode" placeholder="Family Code" />
+            </div>
+
+            <button type="submit" class="btn-login">SIGN UP</button>
+          </form>
+
+          <div class="options">
+            <p>Already have an account? <a href="index.html">Login here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="signup.js"></script>
+  </body>
+</html>
